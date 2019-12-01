@@ -1,0 +1,11 @@
+Machines can learn to recognize faces, drive a car, play go, create art, and even smell. But what about learning how to listen to music? Listening to and enjoying music is an experience that is uniquely human. Nothing but vibrations in the air, music can be both incredibly simple and infinitely complex at the same time.
+
+Can a machine identify, isolate, and extract the emotional response humans feel when they listen music? Can humans even do that? Empirical research suggests that even within a single person, there are many factors such as setting, current temperament, or even present mindfulness that may influence the emotional response to the same song.
+
+These are the questions I hoped to answer with this project. And while teaching a machine to learn a moving target may seem like a futile task, thankfully we live in an era with an abundance of data. If Condorcet's Jury Theorem has taught us anything, it’s that the more people we have, the closer we are to getting the right answer.
+
+To do this, I employed the help of Spotify, completing nearly half a billion searches over the course of several months — using user-generated playlists to crowdsource our collective emotional experience of music. This data was used to come up with 500 different emotions or moods that can be experienced when listening to music. This was later consolidated to roughly 250 — of which you can explore on this app.
+
+In Latin, "sentire" means both "to listen" and "to feel" -- something that, in my opinion, sums up perfectly the musical experience. And while not all results are perfect and there are some biases in the data (be sure to read the forthcoming blog post outlining the entire project), it is truly incredible to see not only the ability of an algorithm to learn both of these things, but how we as humans can reach a consensus on how music makes us feel.
+
+Enjoy!

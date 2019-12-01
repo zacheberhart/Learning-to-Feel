@@ -1,0 +1,13 @@
+requests
+spotipy
+streamlit
+numpy
+pandas
+matplotlib
+plotly
+pillow
+fastai
+torch
+typing
+librosa
+pydub
