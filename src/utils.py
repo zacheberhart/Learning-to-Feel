@@ -45,31 +45,6 @@ def top_5(input:Tensor, targs:Tensor)->Rank0Tensor:
     k, n = 5, targs.size()[0]
     return top_k(input, targs, k, n)
 
-def top_10(input:Tensor, targs:Tensor)->Rank0Tensor:
-    '''Static Top 10 Accuracy metric (get around fastai init issues)'''
-    k, n = 10, targs.size()[0]
-    return top_k(input, targs, k, n)
-
-def top_20(input:Tensor, targs:Tensor)->Rank0Tensor:
-    '''Static Top 20 Accuracy metric (get around fastai init issues)'''
-    k, n = 20, targs.size()[0]
-    return top_k(input, targs, k, n)
-
-def top_40(input:Tensor, targs:Tensor)->Rank0Tensor:
-    '''Static Top 40 Accuracy metric (get around fastai init issues)'''
-    k, n = 40, targs.size()[0]
-    return top_k(input, targs, k, n)
-
-def top_100(input:Tensor, targs:Tensor)->Rank0Tensor:
-    '''Static Top 100 Accuracy metric (get around fastai init issues)'''
-    k, n = 100, targs.size()[0]
-    return top_k(input, targs, k, n)
-
-def top_k_avg(input:Tensor, targs:Tensor)->Rank0Tensor:
-    '''Get bullseye weighted Top K Accuracy'''
-    accs = [top_5(input, targs), top_10(input, targs), top_20(input, targs), top_40(input, targs), top_100(input, targs)]
-    return torch.mean(torch.stack(accs), dim = 0).float()
-
 def avg_label_rank(input:Tensor, targs:Tensor)->Rank0Tensor:
     '''Computes average rank of multi-label prediction (1 being the best).'''
     n_batches, n_labels, ranks = targs.size()[0], targs.size()[1], []
