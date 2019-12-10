@@ -524,8 +524,8 @@ if __name__ == "__main__":
 
 	# Spotify API
 	SP = spotipy.Spotify(client_credentials_manager = SpotifyClientCredentials(
-		client_id     = '2da510ef59984487a529a8cc09125ae8',
-		client_secret = '31fbd44398d647e2864e86f42670ad38',
+		client_id     = 'redacted',
+		client_secret = 'redacted',
 	))
 
 	# data & constants
