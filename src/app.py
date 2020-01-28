@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,12 +34,12 @@ from mxresnet import *
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Main                                                                           #
 # ::: Handles the navigation / routing and data loading / caching.               #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 
 def main():
@@ -59,12 +59,12 @@ def main():
 	clear_tmp()
 
 	# nav
-	if   app_mode == "About":            show_about()
-	elif app_mode == "Choose an Emotion": explore_classified()
-	elif app_mode == 'Choose an Artist':  explore_artists()
-	elif app_mode == "Classify a Song":  classify_song()
-	elif app_mode == "Emotional Spectrum":  display_emotional_spectrum()
-	elif app_mode == "Show Source Code": st.code(get_file_content_as_string())
+	if   app_mode == "About":              show_about()
+	elif app_mode == "Choose an Emotion":  explore_classified()
+	elif app_mode == 'Choose an Artist':   explore_artists()
+	elif app_mode == "Classify a Song":    classify_song()
+	elif app_mode == "Emotional Spectrum": display_emotional_spectrum()
+	elif app_mode == "Show Source Code":   st.code(get_file_content_as_string())
 
 
 @st.cache
@@ -116,7 +116,7 @@ def show_about():
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Choose an Emotion                                                              #
 # ::: Allow the user to pick one or more labels to get a list of the top songs   #
@@ -125,7 +125,7 @@ def show_about():
 # ::: a metric provided by Spotify's API. Also allow the user to leave the app   #
 # ::: and listen to the song on Spotify's Web App using the provided link.       #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 
 def explore_classified():
@@ -200,13 +200,13 @@ def make_clickable(url, hyperlink_text):
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Choose an Artist                                                               #
 # ::: Display the top 10 labels for an artist specified by the user and a        #
 # ::: list of tracks that we have for that artist in our db.                     #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 
 def explore_artists():
@@ -275,14 +275,14 @@ def get_top_labels(df, dims, n):
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Classify a Song                                                                #
 # ::: Get Top/Bottom 5 Labels for a track specified by the user. If the track    #
 # ::: has already been classified, pull from db. Otherwise, pull audio from      #
 # ::: Spotify and classify using a distilled version of the model.               #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 
 def classify_song():
@@ -462,12 +462,12 @@ def generate_grid():
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Display Emotional Spectrum                                                     #
 # ::: Display all labels as a 3D Scatter chart for the user to explore.          #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 
 def display_emotional_spectrum():
@@ -509,11 +509,11 @@ def all_labels_scatter():
 
 
 
-##################################################################################
+#--------------------------------------------------------------------------------#
 #                                                                                #
 # Execute                                                                        #
 #                                                                                #
-##################################################################################
+#--------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
 
