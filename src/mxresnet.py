@@ -7,6 +7,7 @@ from fastai.torch_core import Module
 import torch.nn.functional as F
 
 
+# https://arxiv.org/abs/1908.08681
 class Mish(nn.Module):
     
     def __init__(self):
@@ -108,9 +109,6 @@ class MXResNet(nn.Sequential):
         sizes = [c_in, 32, 64, 64]  #modified per Grankin
         for i in range(3):
             stem.append(conv_layer(sizes[i], sizes[i+1], stride = 2 if i == 0 else 1))
-            #nf = filt_sz(c_in*9)
-            #stem.append(conv_layer(c_in, nf, stride = 2 if i == 1 else 1))
-            #c_in = nf
 
         block_szs = [64//expansion, 64, 128, 256, 512]
         blocks = [self._make_layer(expansion, block_szs[i], block_szs[i+1], l, 1 if i == 0 else 2, sa = sa if i in[len(layers)-4] else False, sym = sym)
