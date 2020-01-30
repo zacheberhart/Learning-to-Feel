@@ -136,8 +136,6 @@ for n, e, l in [
     [ 18 , 1, [2, 2, 2 , 2] ],
     [ 34 , 1, [3, 4, 6 , 3] ],
     [ 50 , 4, [3, 4, 6 , 3] ],
-    [ 101, 4, [3, 4, 23, 3] ],
-    [ 152, 4, [3, 8, 36, 3] ],
 ]:
     name = f'mxresnet{n}'
     setattr(me, name, partial(mxresnet, expansion = e, n_layers = l, name = name))
